@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OmniFormat AI — Universal File Compatibility & Transcoding Intelligence</title>
+  <meta name="description" content="AI-Powered Universal File Compatibility System. Upload any audio, video, image, document, or 3D file and let AI make it instantly compatible with any destination platform.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="bg-grid"></div>
+
+  <div class="app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="brand-area">
+        <div class="brand-icon" id="brand-logo-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+          </svg>
+        </div>
+        <div>
+          <h2 class="brand-title">OmniFormat AI</h2>
+          <p class="brand-subtitle">Universal File Compatibility Intelligence Layer</p>
+        </div>
+      </div>
+
+      <div class="header-badges">
+        <span class="badge badge-privacy">
+          <span class="badge-dot"></span>
+          100% Client-Side &amp; Private
+        </span>
+        <span class="badge badge-ai">
+          <span class="badge-dot"></span>
+          AI Compatibility Engine Active
+        </span>
+      </div>
+    </header>
+
+    <!-- Hero Pitch -->
+    <div class="hero-pitch">
+      <h1>
+        Upload anything. Choose where you're going. <br>
+        <span class="highlight-text">AI makes it compatible.</span>
+      </h1>
+      <p>
+        Never fumble with codecs, bitrates, sample rates, or manual converters again. 
+        Intelligent multi-media compatibility across social platforms, DAWs, design suites, documents, and 3D engines.
+      </p>
+    </div>
+
+    <!-- Instant Sample Fixtures Bar -->
+    <div class="sample-bar" id="sample-fixtures-bar">
+      <div class="sample-bar-label">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+        </svg>
+        Try Sample Test Files:
+      </div>
+      <div class="sample-pills">
+        <button class="sample-pill-btn active" id="btn-sample-audio" data-type="audio">
+          🎵 voice_recording.m4a (48kHz)
+        </button>
+        <button class="sample-pill-btn" id="btn-sample-image" data-type="image">
+          🖼️ brand_badge_alpha.png (RGBA)
+        </button>
+        <button class="sample-pill-btn" id="btn-sample-video" data-type="video">
+          🎥 landscape_teaser.mp4 (16:9)
+        </button>
+        <button class="sample-pill-btn" id="btn-sample-doc" data-type="document">
+          📄 quarterly_metrics.csv
+        </button>
+        <button class="sample-pill-btn" id="btn-sample-3d" data-type="3d">
+          🧊 poly_cube.obj (3D)
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Studio Grid -->
+    <main class="studio-grid">
+      <!-- Left Column: Source Inspection & Destination Picker -->
+      <section class="studio-card" id="source-destination-panel">
+        <!-- Step 1: Upload Dropzone -->
+        <div class="studio-card-header">
+          <div class="card-title-group">
+            <span class="step-indicator">1</span>
+            <div>
+              <h2 class="card-title">Source File Ingestion</h2>
+              <p class="card-subtitle">Drop any file — Audio, Video, Image, Document, or 3D</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="dropzone-container" id="main-dropzone">
+          <input type="file" id="file-input-element" aria-label="Upload source file">
+          <div class="dropzone-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="17 8 12 3 7 8"></polyline>
+              <line x1="12" y1="3" x2="12" y2="15"></line>
+            </svg>
+          </div>
+          <div class="dropzone-text-main">Drop your source file here, or browse</div>
+          <div class="dropzone-text-sub">No manual format selection needed. AI automatically determines properties.</div>
+          <div class="supported-formats-pills">
+            <span class="format-tag">M4A</span>
+            <span class="format-tag">WAV</span>
+            <span class="format-tag">MP4</span>
+            <span class="format-tag">PNG</span>
+            <span class="format-tag">WEBP</span>
+            <span class="format-tag">CSV</span>
+            <span class="format-tag">PDF</span>
+            <span class="format-tag">OBJ</span>
+            <span class="format-tag">STL</span>
+          </div>
+        </div>
+
+        <!-- Step 2: Inspected File Preview & Deep Technical Specs -->
+        <div class="file-preview-card" id="file-inspected-card">
+          <div class="file-primary-info">
+            <div class="file-type-icon type-audio" id="preview-type-badge">M4A</div>
+            <div class="file-meta-header">
+              <div class="file-filename" id="preview-filename">voice_recording.m4a</div>
+              <div class="file-size-badge" id="preview-filesize">2.4 MB • Binary Magic Bytes Verified</div>
+            </div>
+          </div>
+
+          <!-- Dynamic Visualizer / Player Area -->
+          <div class="file-visualizer-box" id="media-visualizer-area">
+            <canvas class="waveform-canvas" id="audio-waveform-canvas" width="400" height="60"></canvas>
+          </div>
+
+          <!-- Deep Technical Specs Grid -->
+          <div class="specs-grid" id="specs-grid-display">
+            <!-- Rendered dynamically -->
+          </div>
+        </div>
+
+        <!-- Step 3: Destination Selection -->
+        <div class="destination-section" style="margin-top: 28px;">
+          <div class="studio-card-header">
+            <div class="card-title-group">
+              <span class="step-indicator">2</span>
+              <div>
+                <h2 class="card-title">Destination Platform</h2>
+                <p class="card-subtitle">Where is this file going?</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category Filter Tabs -->
+          <div class="destination-categories" id="platform-category-tabs">
+            <!-- Rendered dynamically -->
+          </div>
+
+          <!-- Platform Grid -->
+          <div class="platform-grid" id="platform-items-grid">
+            <!-- Rendered dynamically -->
+          </div>
+
+          <!-- Custom AI Prompt Box -->
+          <div class="custom-prompt-container">
+            <div class="custom-prompt-label">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+              Or specify a custom platform or requirements in plain English:
+            </div>
+            <div class="custom-prompt-row">
+              <input type="text" class="custom-prompt-input" id="custom-target-input" placeholder="e.g. Broadcast TV station requiring 48kHz mono WAV under 20MB">
+              <button class="custom-prompt-btn" id="custom-target-btn">Synthesize Target</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Right Column: Compatibility Matrix, AI Reasoning, Safety Alerts, & Transcoder -->
+      <section class="studio-card compatibility-card" id="compatibility-action-panel">
+        <div class="studio-card-header">
+          <div class="card-title-group">
+            <span class="step-indicator">3</span>
+            <div>
+              <h2 class="card-title">Compatibility Matrix &amp; Guardian</h2>
+              <p class="card-subtitle">Side-by-side technical evaluation &amp; quality check</p>
+            </div>
+          </div>
+          <div class="badge badge-ai" id="compat-score-badge">90% Match</div>
+        </div>
+
+        <!-- Status Banner -->
+        <div class="compatibility-status-banner status-incompatible" id="compat-status-banner">
+          <div class="status-icon-wrap" id="compat-status-icon">⚠️</div>
+          <div class="status-info-wrap">
+            <h3 id="compat-status-title">Incompatible Format</h3>
+            <p id="compat-status-subtitle">Destination requires WAV (PCM 44.1kHz), but your file is M4A (AAC 48kHz).</p>
+          </div>
+        </div>
+
+        <!-- Side-by-Side Diff Table -->
+        <table class="matrix-table" id="compatibility-diff-table">
+          <thead>
+            <tr>
+              <th>Property</th>
+              <th>Current File</th>
+              <th>Destination Spec</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="matrix-table-body">
+            <!-- Rendered dynamically -->
+          </tbody>
+        </table>
+
+        <!-- AI Reasoning Box -->
+        <div class="ai-reasoning-box" id="ai-reasoning-container">
+          <div class="ai-reasoning-header">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+            AI Compatibility Diagnosis
+          </div>
+          <p class="ai-reasoning-body" id="ai-reasoning-text">
+            Analyzing current file properties against platform requirements...
+          </p>
+        </div>
+
+        <!-- Safety / Quality Loss Alert (Conditionally shown) -->
+        <div class="safety-alert-box" id="safety-alert-box" style="display: none;">
+          <div class="safety-alert-icon">⚠️</div>
+          <div class="safety-alert-text">
+            <h4 id="safety-alert-title">Irreversible Quality Warning</h4>
+            <p id="safety-alert-message">Converting this image to JPEG will discard its transparent alpha channel.</p>
+          </div>
+        </div>
+
+        <!-- Conversion Action Stage -->
+        <div class="action-stage" id="conversion-action-stage">
+          <button class="btn-convert-primary" id="btn-execute-conversion">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
+            </svg>
+            <span id="btn-convert-label">Convert &amp; Make Compatible</span>
+          </button>
+
+          <!-- Progress Bar Box (Hidden during idle) -->
+          <div class="conversion-progress-box" id="conversion-progress-box" style="display: none;">
+            <div class="progress-info-row">
+              <div class="progress-stage-name" id="progress-stage-label">
+                <span class="badge-dot"></span> Transcoding bitstream...
+              </div>
+              <div class="progress-percentage" id="progress-percentage-label">45%</div>
+            </div>
+            <div class="progress-bar-track">
+              <div class="progress-bar-fill" id="progress-bar-fill"></div>
+            </div>
+          </div>
+
+          <!-- Converted Result Box (Shown upon completion) -->
+          <div class="conversion-result-box" id="conversion-result-box" style="display: none;">
+            <div class="result-header">
+              <div class="result-check-icon">✓</div>
+              <div class="result-header-text">
+                <h3 id="result-filename-text">voice_recording_compatible.wav</h3>
+                <p id="result-specs-text">Successfully transcoded • Ready for destination upload</p>
+              </div>
+            </div>
+            <div class="result-actions-row">
+              <button class="btn-download-result" id="btn-download-result">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                Download Converted File
+              </button>
+              <button class="btn-handoff-dest" id="btn-simulate-handoff">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                Direct Handoff to Destination
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Toast Notification Template Container -->
+  <div id="toast-container"></div>
+
+  <!-- Main Application Script (ES Module) -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
